@@ -1,0 +1,213 @@
+/*移除下划线*/
+a:link{
+    text-decoration:none;
+}
+a:visited{
+    text-decoration:none;
+}
+a:hover{
+    text-decoration:none;
+    color: inherit;
+}
+a:active{
+    text-decoration:none;
+}
+
+a, body{
+    font-size: 15px;
+    color: #333;
+}
+
+/*sign_in.html*/
+.page{
+    height: 100%;
+    min-height: 750px;
+    background-color: #f1f1f1;
+}
+
+.sign{
+    /*width: 350px;*/
+    margin: 60px auto 0;
+    padding: 50px 50px 30px;
+    vertical-align: middle;
+
+}
+.panel-heading{
+    background-color: transparent !important;
+}
+.title{
+    font-size: 18px;
+    height: 40px;
+    text-align: center;
+    /*margin: 20px 0 0 0;*/
+}
+.title a{
+    padding: 10px;
+    color: #969696;
+
+}
+.actived{
+    font-weight: 700;
+    color: #ea6f5a !important;
+    border-bottom: 2px solid #ea6f5a;
+
+}
+
+
+.sign-in-button{
+    font-size: 18px;
+    padding: 9px 18px;
+    border-radius: 25px;
+    width: 100%;
+    border: none;
+}
+.form-control{
+    height: 50px;
+    background-color:hsla(0,0%,71%,.1);
+    width: 80%;
+}
+.checkbox{
+    float: left;
+}
+.forget{
+    float: right;
+
+}
+.forget a{
+    border: none;
+}
+
+.more-sign{
+    text-align: center;
+}
+.more-sign .qq{
+    background-color:#498ad5;
+}
+.more-sign .weixin{
+    background-color:#00bb29;
+}
+.more-sign .weibo{
+    background-color:#e05244;
+}
+
+.more-sign ul li a {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: block;
+    line-height: 60px;
+}
+.iconfont{
+    color: #fff;
+    font-size: 24px;
+}
+
+/*sign-up.html*/
+.sign-up-msg{
+    margin: 10px 0;
+    font-size: 12px;
+    text-align: center;
+    line-height: 20px;
+    color: #969696;
+}
+.sign-up-button{
+    font-size: 18px;
+    padding: 9px 18px;
+    border-radius: 25px;
+    width: 100%;
+    background-color: #42c02e;
+    border: none;
+}
+.sign-up-button:hover{
+    background-color: #3db922;
+}
+
+
+/*rights/index.html*/
+
+.navbar-nav > li > a{
+    line-height: 26px;
+}
+.navbar-brand{
+    height:56px;
+    line-height: 26px;
+    font-size: 20px;
+}
+.rights-navbar a{
+    height:56px;
+    font-size: 16px;
+}
+.user_img{
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ddd;
+    margin: -10px 5px -4px 10px;
+}
+
+.note-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.note-list li {
+    position: relative;
+    width: 100%;
+    margin: 0 0 17px;
+    padding: 0 2px 17px 0;
+    border-bottom: 1px solid #f0f0f0;
+    word-wrap: break-word;
+}
+.note-list .avatar img {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+}
+.note-list .author .avatar, .note-list .author .name {
+    display: inline-block;
+    vertical-align: middle;
+}
+.note-list .rights-title:visited {
+    color: #969696;
+}
+.note-list .rights-title {
+    color: #333;
+    margin: 5px 0 4px;
+    display: inherit;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+.note-list .meta {
+    padding-right: 0 !important;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+}
+.note-list .collection-tag {
+    text-align: center;
+    padding: 2px 6px !important;
+    border: 1px solid rgba(236, 97, 73, .7);
+    border-radius: 3px;
+    color: #ea6f5a !important;
+    background-color: transparent
+}
+
+.collection li{
+    width:70px;
+    height:28px;
+    text-align:center;
+    line-height: 26px;
+    margin:5px 5px 4px 15px;
+    border:1px solid rgba(236,97,73,.7);
+    border-radius:4px;
+    color:#ea6f5a !important;
+    list-style: none;
+    background-color:transparent
+}
+.collection li a {
+    color: #ea6f5a !important;
+}
+button {
+    background-color: #ea6f5a !important;
+}

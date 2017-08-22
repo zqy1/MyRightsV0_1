@@ -1,0 +1,129 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}首页-权益说{% endblock %}
+
+{% block content %}
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#rights-navbar-collapse" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">权益说</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="rights-navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="rights-navbar"><a href="#">首页 <span class="sr-only">(current)</span></a></li>
+                <li class="rights-navbar"><a href="#">公告栏</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                {% if user %}
+                    <li class="dropdown">
+                        <a id="dLabel" data-target="#" href="" data-toggle="dropdown" role="button" aria-haspopup="true"
+                           aria-expanded="false">
+                            <img class="img-circle user_img" src="../images/728368da2b0d.png" alt="用户头像">
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dLabel">
+                            <li><a href="#"> 我的主页</a></li>
+                            <li><a href="#"> 设置</a></li>
+                            <li><a href="#"> 帮助与反馈</a></li>
+                            <li><a href="{% url 'logout' %}"> 退出</a></li>
+                        </ul>
+                    </li>
+                    <li class="rights-navbar"><a class="" href="#">{{ user }}</a></li>
+                    <li class="rights-navbar"><a class="write-btn" href="#"><i class="icon-pencil2"></i> 写吐槽</a></li>
+                {% else %}
+                    <li class="rights-navbar"><a class="log-in" href="{% url 'sign_in' %}">登录</a></li>
+                    <li class="rights-navbar"><a class="sign-up" href="{% url 'sign_up' %}">注册</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- header -->
+<header class="jumbotron">
+    <div class="container">
+        <h1 class="text-center">权益说</h1>
+        <h3 class="text-center">淮海工学院</h3>
+    </div>
+</header>
+<!-- /.header -->
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-9">
+            <div class="list-group-item">
+                <ul class="note-list">
+                    <li id="70551">
+                        <div class="content">
+                            <div class="author">
+                                <a class="avatar" target="_blank" href="">
+                                    <img src="../images/728368da2b0d.png" alt="用户头像">
+                                </a>
+                                <div class="name">
+                                    <a class="author_link" target="_blank" href="">涉世之初</a>
+                                    <span class="time">2017.06.21 10:24</span>
+                                </div>
+                                <a class="rights-title" target="_blank" href="sign_in.html" >臧奇颜加油咯</a>
+                                <p class="abstract">加油加油</p>
+                            </div>
+
+                            <div class="meta">
+                                <a class="collection-tag" href="" target="_blank">图书馆</a>
+                                <span>
+                                    <i class="icon-eye">266 </i>
+                                </span>
+                                <span>
+                                    <i class="icon-heart">32 </i>
+                                </span>
+                                <span>
+                                    <i class="icon-comment">32 </i>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="col-xs-12 col-md-3">
+            <div class="list-group-item">
+                <ul class="collection">
+                    <li><a href="">图书馆</a></li>
+                    <li><a href="">学生宿舍</a></li>
+                    <li><a href="">食堂</a></li>
+                    <li><a href="">超市</a></li>
+                    <li><a href="">任课教师</a></li>
+                    <li><a href="">其他</a></li>
+                </ul>
+
+            </div>
+
+
+        </div>
+    </div>
+
+</div>
+
+<!-- footer -->
+<footer class="footer" role="contentinfo">
+    <hr>
+    <div class="container text-center">
+        <div class="col-md-12">
+            <span class="icon-qq"></span>
+            <span class="icon-wechat"></span>
+            <span class="icon-weibo"></span>
+        </div>
+        <div class="col-md-12 text-center">
+            <p class="text-center"><strong>淮海工学院</strong></p>
+            <p>&copy; 2017. All Rights Reserved. <span>Designed with <i class="icon-heart"></i> by <a href="" target="_blank">且换浮名</a></span></p>
+        </div>
+    </div>
+</footer>
+<!-- /.footer -->
+{% endblock %}

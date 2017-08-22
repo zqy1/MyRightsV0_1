@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}登录-权益说{% endblock %}
+
+{% block content %}
+<div class="container-fluid page">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <div class="">
+                <div class="panel panel-default sign">
+                    <div class="panel-heading">
+                        <h3 class="panel-title title">
+                            <a class="actived" href="{% url 'sign_in' %}">登录</a>
+                            <b>·</b>
+                            <a href="{% url 'sign_up' %}">注册</a>
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <form class="form" name="sign_in" method="POST">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label class="control-label sr-only" for="InputAccount">account_or_email</label>
+                                <div class="input-group">
+                                    <i class="input-group-addon"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> </i>
+                                    <input type="text" class="form-control" name="Account" id="InputAccount" placeholder="帐号或邮箱" autofocus>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label sr-only" for="InputPassword">password</label>
+                                <div class="input-group">
+                                    <i class="input-group-addon"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span> </i>
+                                    <input type="password" class="form-control" name="password" id="InputPassword" placeholder="密码">
+                                </div>
+                            </div>
+
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox"> 记住我
+                                </label>
+                            </div>
+
+                            <div class="forget">
+                                <div class="dropdown">
+                                    <a class="btn btn-default dropdown-toggle"  id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                        登录遇到问题？
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                        <li><a href="#">用手机号重置密码</a></li>
+                                        <li role="separator" class="divider"></li>
+                                        <li><a href="#">用邮箱重置密码</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <button type="submit" name="sign_in" class="btn btn-primary sign-in-button">登录</button>
+                        </form>
+                    </div>
+                    <div class="more-sign">
+                        <h6><small>——————其他方式登录——————</small></h6>
+                        <ul class="list-inline">
+                            <li><a class="qq" target="_blank" href=""><i class="iconfont icon-qq"></i></a> </li>
+                            <li><a class="weixin" target="_blank" href=""><i class="iconfont icon-weixin"></i></a> </li>
+                            <li><a class="weibo" target="_blank" href=""><i class="iconfont icon-weibo"></i></a> </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
+
+
