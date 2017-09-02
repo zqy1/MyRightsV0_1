@@ -16,20 +16,21 @@
                         </h3>
                     </div>
                     <div class="panel-body">
-                        <form class="form">
+                        <form class="form" id="sign_up" method="POST">
+                            {{ form.non_field_errors }}
                             <div class="form-group">
-                                <label class="control-label sr-only" for="InputEmail">account_or_email</label>
+                                <label class="control-label sr-only" for="SignUpAccount">account_or_email</label>
                                 <div class="input-group">
                                     <i class="input-group-addon"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> </i>
-                                    <input type="email" class="form-control" id="InputEmail" placeholder="帐号或邮箱" autofocus>
+                                    {{ form.username }}
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="control-label sr-only" for="InputPassword">password</label>
+                                <label class="control-label sr-only" for="SignUpPassword">password</label>
                                 <div class="input-group">
                                     <i class="input-group-addon"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span> </i>
-                                    <input type="password" class="form-control" id="InputPassword" placeholder="密码">
+                                    {{ form.password }}
                                 </div>
                             </div>
 
@@ -37,7 +38,7 @@
                                 <label class="control-label sr-only" for="RepeatPassword">password</label>
                                 <div class="input-group">
                                     <i class="input-group-addon"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span> </i>
-                                    <input type="password" class="form-control" id="RepeatPassword" placeholder="重复密码">
+                                    {{ form.repeat_password }}
                                 </div>
                             </div>
 
